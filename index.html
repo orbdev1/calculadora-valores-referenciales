@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RYVAQM - Herramienta</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="container">
+  <div class="tool-container">
+    <h1>CALCULO VALOR REFERENCIAL</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>N°</th>
+          <th>Destino</th>
+          <th>Valor Referencial</th>
+          <th>Carga Real</th>
+        </tr>
+      </thead>
+      <tbody id="tbodyContenedor">
+        <tr id="rowCity">
+          <td class="indices">1</td>
+          <td>
+            <select id="selectCiudades">
+            </select>
+          </td>
+          <td><input type="text" name="" id="valorRef" class="valoresReferenciales" disabled></td>
+          <td><input type="number" name="" id="cargaReal" placeholder="0"></td>
+        </tr>
+        <tr id="traddcity">
+          <td></td>
+          <td><button id="btnaddcity">+</button></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr id="trfooter">
+          <td></td>
+          <td></td>
+          <td><input type="text" name="" id="totalValRef" readonly></td>
+          <td><input type="text" name="" id="totalCarga" placeholder="0" readonly></td>
+        </tr>
+      </tbody>
+    </table>
+    <div>
+      <button id="btnLimpiar">Limpiar</button>
+      <button>Guardar</button>
+    </div>
+    <div>
+      <span>Facturacion</span>
+      <input type="number" name="" id="facturacion" placeholder="0">
+      <br>
+      <span>Detracción</span>
+      <input type="text" name="" id="detraccion" readonly>
+      <br>
+      <span>Valor Referencial Servicio</span>
+      <input type="text" name="" id="valorRefServ" readonly>
+      <br>
+      <span>Valor Referencial Carga Efectiva</span>
+      <input type="text" name="" id="valorRefCarEfect" readonly>
+      <br>
+      <span>Valor Referencial Carga Útil Nominal</span>
+      <input type="text" name="" id="valorRefCarUtil" readonly>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
