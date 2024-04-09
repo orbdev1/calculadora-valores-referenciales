@@ -1,14 +1,27 @@
 const d = document;
 const cities = [
-  { id: 0, city: "Seleccionar...", tnm: 0 },
   { id: 1, city: "Lima - Huacho", tnm: 81.91 },
   { id: 2, city: "Barranca", tnm: 90.06 },
   { id: 3, city: "Huaral", tnm: 71.98 },
   { id: 4, city: "Huarmey", tnm: 107.15 },
   { id: 5, city: "Cañete", tnm: 81.26 },
   { id: 8, city: "Casma", tnm: 121.38 },
-  { id: 9, city: "Huarmey", tnm: 107.15 },
+  { id: 10, city: "Ica", tnm: 109.23 },
+  { id: 11, city: "Nazca", tnm: 133.93 },
+  { id: 12, city: "Pativilca", tnm: 91.32 },
+  { id: 13, city: "Chimbote", tnm: 131.26 },
+  { id: 14, city: "Chincha Alta", tnm: 90.71 },
+  { id: 15, city: "Trujillo", tnm: 160.35 },
 ];
+
+cities.sort((a, b) => {
+  if (a.city < b.city) return -1;
+  if (a.city > b.city) return 1;
+  return 0;
+});
+
+cities.unshift({ id: 0, city: "Seleccionar...", tnm: 0 });
+
 
 const $selectCiudades = d.getElementById("selectCiudades"),
   $valorRef = d.getElementById("valorRef"),

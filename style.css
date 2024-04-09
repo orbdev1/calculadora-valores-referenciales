@@ -10,6 +10,36 @@ body {
   justify-content: center;
   align-items: center;
   background-color: rgb(255, 255, 255);
+
+  width: 100%;
+  height: 100%;
+  --color: rgba(114, 114, 114, 0.3);
+  background-color: #ffffff;
+  background-image: linear-gradient(
+      0deg,
+      transparent 24%,
+      var(--color) 25%,
+      var(--color) 26%,
+      transparent 27%,
+      transparent 74%,
+      var(--color) 75%,
+      var(--color) 76%,
+      transparent 77%,
+      transparent
+    ),
+    linear-gradient(
+      90deg,
+      transparent 24%,
+      var(--color) 25%,
+      var(--color) 26%,
+      transparent 27%,
+      transparent 74%,
+      var(--color) 75%,
+      var(--color) 76%,
+      transparent 77%,
+      transparent
+    );
+  background-size: 55px 55px;
 }
 
 .tool-container {
@@ -26,6 +56,10 @@ body {
   -moz-box-shadow: 5px 6px 38px 2px rgba(0, 0, 0, 0.53);
 }
 
+.tool-container div {
+  margin-top: 2rem;
+}
+
 table,
 th,
 td {
@@ -39,14 +73,26 @@ table {
   text-align: center;
 }
 
-
-
 thead {
-  background-color: rgb(162, 195, 253);
+  background-color: #222222;
+  color: white;
 }
 
-th{
+th {
   padding: 15px 0;
+}
+
+th:first-child {
+  border-radius: 15px 0 0 0;
+}
+
+th:last-child {
+  border-radius: 0 15px 0 0;
+}
+
+#cargaReal,
+#facturacion {
+  border: #000000 solid;
 }
 
 td {
@@ -54,16 +100,25 @@ td {
 }
 
 tbody tr:nth-child(even) {
-  background-color: rgb(205, 213, 244);
+  background-color: rgb(217, 217, 217);
 }
 
 #traddcity {
-  background-color: rgb(227, 234, 255);
+  background-color: rgb(234, 235, 237);
 }
 
 #trfooter {
-  background-color: rgb(189, 213, 255);
+  background-color: #222222;
 }
+
+#trfooter td:first-child {
+  border-radius: 0 0 0 15px;
+}
+
+#trfooter td:last-child {
+  border-radius: 0 0 15px 0;
+}
+
 table input {
   width: 4rem;
 }
@@ -79,4 +134,54 @@ input {
 h1 {
   font-size: 1.5rem;
   text-align: center;
+}
+
+.datos {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  color: white;
+  background-color: #222222;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  line-height: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  cursor: pointer;
+  text-align: center;
+  margin-right: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  border: none;
+}
+
+.button:hover {
+  background-color: #333;
+}
+
+.button svg {
+  display: inline;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.75rem;
+  color: white;
+}
+
+.button:focus svg {
+  animation: spin_357 0.5s linear;
+}
+
+@keyframes spin_357 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
